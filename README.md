@@ -42,8 +42,14 @@ bun run build
 This CLI template comes pre-configured with:
 
 - **psum** (^0.5.1): Generate structured codebase summaries
-- **opencode-context** (^1.0.8): Semantic file search with ranked matches
+  - `npx psum .` - Scan current directory
+  - `npx psum ./src --format json` - Output as JSON
+  - `npx psum . --depth 2 --no-tests` - Customize scan depth
+
 - **oh-my-changeloggy** (^1.2.9): Generate changelogs from git conventional commits
+  - `npx changeloggy --since last-tag` - Generate since last tag
+  - `npx changeloggy --release v1.0.0` - Generate for specific version
+  - Uses conventional commits: `feat:`, `fix:`, `refactor:`, `docs:`
 
 ## CI/CD
 

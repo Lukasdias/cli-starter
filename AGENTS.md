@@ -97,9 +97,66 @@ scripts/
 - **zod**: Runtime type validation
 
 ### Included Libraries
-- **psum**: Project structure summarizer
-- **opencode-context**: Semantic file search
-- **oh-my-changeloggy**: Changelog generation from git commits
+
+#### psum
+Project structure summarizer for generating AI-optimized codebase overviews.
+
+**CLI Usage:**
+```bash
+# Scan current directory
+npx psum .
+
+# Scan specific path with format
+npx psum ./src --format json
+npx psum ./src --format markdown
+npx psum ./src --format ascii
+npx psum ./src --format mermaid
+
+# With options
+npx psum . --depth 2 --no-tests --cache
+```
+
+**Programmatic Usage:**
+```typescript
+import { scanProject } from 'psum';
+import { formatMarkdown } from 'psum/formatters';
+
+const summary = await scanProject('./src', { depth: 3 });
+const output = formatMarkdown(summary);
+```
+
+#### oh-my-changeloggy
+Generate changelogs from git conventional commits.
+
+**CLI Usage:**
+```bash
+# Generate changelog since last tag
+npx changeloggy --since last-tag
+
+# Generate for specific version
+npx changeloggy --release v1.0.0 --output CHANGELOG.md
+
+# Include internal commits
+npx changeloggy --include-internal
+
+# JSON output
+npx changeloggy --format json
+```
+
+**In CI/CD (Release workflow):**
+The release workflow automatically generates changelogs:
+```yaml
+- name: Generate Changelog
+  run: npx changeloggy --since last-tag --output CHANGELOG.md
+```
+
+**Commit Format:**
+```
+feat(api): add new endpoint
+fix(auth): resolve login issue
+refactor(core): simplify logic
+docs(readme): update instructions
+```
 
 ## CI/CD
 

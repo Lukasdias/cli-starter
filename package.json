@@ -38,7 +38,6 @@
     "commander": "^12.0.0",
     "fast-glob": "^3.3.2",
     "oh-my-changeloggy": "^1.2.9",
-    "opencode-context": "^1.0.8",
     "picocolors": "^1.0.1",
     "psum": "^0.5.1",
     "zod": "^3.23.8"
