@@ -43,6 +43,12 @@ echo "Bumping to: $new_version"
 
 sed -i "s/\"version\": \"$current_version\"/\"version\": \"$new_version\"/" package.json
 
+if command -v changeloggy &> /dev/null || [ -f "./node_modules/.bin/changeloggy" ]; then
+  echo "Generating changelog..."
+  npx changeloggy --release "$new_version" --output CHANGELOG.md || true
+  git add CHANGELOG.md || true
+fi
+
 git add package.json
 git commit -m "chore: release v$new_version" || true
 
