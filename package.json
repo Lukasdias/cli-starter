@@ -1,0 +1,59 @@
+{
+  "name": "{{PROJECT_NAME}}",
+  "version": "0.1.0",
+  "description": "{{PROJECT_DESCRIPTION}}",
+  "module": "dist/cli.js",
+  "type": "module",
+  "main": "dist/cli.js",
+  "types": "dist/cli.d.ts",
+  "bin": {
+    "{{CLI_NAME}}": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "dev": "bun run src/cli.ts",
+    "build": "bun run build.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test",
+    "test:watch": "bun test --watch",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "bun run clean && bun run build",
+    "release": "./scripts/release.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:{{GITHUB_USERNAME}}/{{PROJECT_NAME}}.git"
+  },
+  "author": "{{AUTHOR}}",
+  "bugs": {
+    "url": "https://github.com/{{GITHUB_USERNAME}}/{{PROJECT_NAME}}/issues"
+  },
+  "homepage": "https://github.com/{{GITHUB_USERNAME}}/{{PROJECT_NAME}}#readme",
+  "dependencies": {
+    "@clack/prompts": "^0.9.1",
+    "commander": "^12.0.0",
+    "fast-glob": "^3.3.2",
+    "oh-my-changeloggy": "^1.2.9",
+    "opencode-context": "^1.0.8",
+    "picocolors": "^1.0.1",
+    "psum": "^0.5.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.11",
+    "bun-types": "latest",
+    "typescript": "^5.0.0"
+  },
+  "keywords": [
+    "cli",
+    "developer-tools"
+  ],
+  "license": "MIT",
+  "engines": {
+    "bun": ">=1.0.0"
+  }
+}
