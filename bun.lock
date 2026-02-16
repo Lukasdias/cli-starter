@@ -9,7 +9,6 @@
         "commander": "^12.0.0",
         "fast-glob": "^3.3.2",
         "oh-my-changeloggy": "^1.2.9",
-        "opencode-context": "^1.0.8",
         "picocolors": "^1.0.1",
         "psum": "^0.5.1",
         "zod": "^3.23.8",
@@ -31,10 +30,6 @@
     "@nodelib/fs.stat": ["@nodelib/fs.stat@2.0.5", "", {}, "sha512-RkhPPp2zrqDAQA/2jNhnztcPAlv64XdhIp7a7454A5ovI7Bukxgt7MX7udwAu3zg1DcpPU0rz3VV1SeaqvY4+A=="],
 
     "@nodelib/fs.walk": ["@nodelib/fs.walk@1.2.8", "", { "dependencies": { "@nodelib/fs.scandir": "2.1.5", "fastq": "^1.6.0" } }, "sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg=="],
-
-    "@opencode-ai/plugin": ["@opencode-ai/plugin@1.2.5", "", { "dependencies": { "@opencode-ai/sdk": "1.2.5", "zod": "4.1.8" } }, "sha512-mZACBKyMMhH87K6HtiigbauLKjK7ooZPVaZTnRs492ldAXhiSfqk28Z8hGYNzhpwpHjkU6Ws8LOJRwOemDVQYg=="],
-
-    "@opencode-ai/sdk": ["@opencode-ai/sdk@1.2.5", "", {}, "sha512-oFw08QNupBWuszpLa4HMRf/T+fDVqu8lbYSiqevdFTSH8Zih2cw/vPqLhjHgE6rPOSXyhvg46WivfSO7eNIpPw=="],
 
     "@types/node": ["@types/node@22.19.11", "", { "dependencies": { "undici-types": "~6.21.0" } }, "sha512-BH7YwL6rA93ReqeQS1c4bsPpcfOmJasG+Fkr6Y59q83f9M1WcBRHR2vM+P9eOisYRcN3ujQoiZY8uk5W+1WL8w=="],
 
@@ -64,8 +59,6 @@
 
     "oh-my-changeloggy": ["oh-my-changeloggy@1.2.9", "", { "dependencies": { "@clack/prompts": "^0.9.1", "commander": "^12.0.0", "picocolors": "^1.0.0" }, "bin": { "changeloggy": "dist/cli.js" } }, "sha512-+5PEQ+rzcVtG9JEBny3x6XKMFebJJxmtIj5kCmcTE+XtGK+MCbp+3w24m3uVsqgmatCw7RpOezy5geD8edjwAA=="],
 
-    "opencode-context": ["opencode-context@1.0.8", "", { "dependencies": { "@clack/prompts": "^0.9.1", "@opencode-ai/plugin": "^1.2.2", "commander": "^12.0.0", "fast-glob": "^3.3.2", "picocolors": "^1.0.0" }, "bin": { "opencode-context": "dist/index.js" } }, "sha512-TRZqDWgJD4OQANuV9WY9kDj9aOtt3spu9SzJxRWLciC7yjFmLs5rzSu8b+T7Y+8V/q8rUDhmcXVQ+Gj+4nzB+Q=="],
-
     "picocolors": ["picocolors@1.1.1", "", {}, "sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA=="],
 
     "picomatch": ["picomatch@2.3.1", "", {}, "sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA=="],
@@ -87,7 +80,5 @@
     "undici-types": ["undici-types@6.21.0", "", {}, "sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ=="],
 
     "zod": ["zod@3.25.76", "", {}, "sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ=="],
-
-    "@opencode-ai/plugin/zod": ["zod@4.1.8", "", {}, "sha512-5R1P+WwQqmmMIEACyzSvo4JXHY5WiAFHRMg+zBZKgKS+Q1viRa0C1hmUKtHltoIFKtIdki3pRxkmpP74jnNYHQ=="],
   }
 }
