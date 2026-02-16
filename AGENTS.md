@@ -187,6 +187,13 @@ bun run release major
 bun run release patch --force
 ```
 
+The release script will:
+1. Bump version in package.json
+2. Generate CHANGELOG.md using changeloggy
+3. Commit version bump and changelog
+4. Create git tag
+5. Push to origin
+
 After pushing a tag, GitHub Actions will:
 1. Run tests and type checking
 2. Build the project
